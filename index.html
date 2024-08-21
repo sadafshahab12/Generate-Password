@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Generator | Sadaf Shahab</title>
+    <!-- css links  -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+
+  </head>
+  <body>
+    <div class="container">
+      <h2>Random Password Generator</h2>
+      <div class="pass-container">
+        <input value="" type="text" disabled />
+        <img src="./icon/" title="copy-password" >
+      </div>
+      
+      <!-- password range  -->
+      <div class="pass-range">
+        <input type="range" min="6" max="16" value="8" />
+        <span class="range-num">8</span>
+      </div>
+      <!-- generate button  -->
+      <button class="pass-generate">Generate</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
