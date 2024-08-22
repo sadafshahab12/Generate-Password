@@ -14,9 +14,7 @@ body {
   align-items: center;
   background: linear-gradient(135deg, #bc0909 34%, #24046d 59%);
   height: 100vh;
-  
 }
-
 
 .container {
   border-radius: 2rem;
@@ -48,14 +46,13 @@ body {
   font-weight: bold;
   margin-left: 1.5rem;
 }
-.pass-container img {
-  width: 1.5rem;
-  height: 2rem;
+.pass-container i {
   position: relative;
-  right: 2.4rem;
-  top: 0.6rem;
+  right: 2rem;
+  top: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  color: brown;
 }
 
 .pass-container img:active {

@@ -1,5 +1,5 @@
 const password_input = document.querySelector(".pass-container input");
-const copy_icon = document.querySelector(".pass-container img");
+const copy_icon = document.querySelector(".pass-container i");
 const range_box = document.querySelector(".pass-range input");
 const range_numb = document.querySelector(".pass-range .range-num");
 const gen_btn = document.querySelector(".pass-generate");
@@ -31,13 +31,12 @@ const generate_pass = () => {
     let random = Math.floor(Math.random() * characters.length);
     // console.log(characters[random]); just for checking value
     new_password += characters[random];
-
   }
 
+  // <i class="fa-regular fa-circle-check"></i>
   password_input.value = new_password;
-  
-  let copy_src2 = "/icon/icon 7.png"
-  copy_icon.src = copy_src2;
+
+  copy_icon.classList.replace("fa-circle-check", "fa-copy");
 };
 generate_pass();
 gen_btn.addEventListener("click", generate_pass);
@@ -45,12 +44,10 @@ gen_btn.addEventListener("click", generate_pass);
 // copy pass input value with copy icon
 
 // function for copy icon:
-let copy_src = "/icon/icon 6.png"
+// <i class="fa-solid fa-check"></i>
+
 const copy = () => {
   navigator.clipboard.writeText(password_input.value);
-    copy_icon.src = copy_src;
-
+  copy_icon.classList.replace("fa-copy", "fa-circle-check");
 };
 copy_icon.addEventListener("click", copy);
-
-
